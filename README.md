@@ -1,4 +1,4 @@
 jsutils
 =======
 
-including many useful javascript funcs
+including many useful javascript functions
