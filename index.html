@@ -10,7 +10,16 @@
 <body>
 	<code>
 		var json = '{"name": "iamxiaoma", "age": 25}';
+		<br/>
 		console.log(window._jsutils.parseHelper.parseJSON(json));
+		<br/>
+		var mobile = '13800138000';
+		<br/>
+		var tel = '020-8888888';
+		<br/>
+		console.log('checkIsMobile', window._jsutils.regexHelper.checkIsMobile(mobile));
+		<br/>
+		console.log('checkIsTel', window._jsutils.regexHelper.checkIsTel(tel));
 	</code>
 
 
@@ -18,6 +27,12 @@
 
 	var json = '{"name": "iamxiaoma", "age": 25}';
 	console.log("parseHelper.parseJSON", window._jsutils.parseHelper.parseJSON(json));
+
+	var mobile = '13800138000';
+	var tel = '020-8888888';
+
+	console.log('checkIsMobile', window._jsutils.regexHelper.checkIsMobile(mobile));
+	console.log('checkIsTel', window._jsutils.regexHelper.checkIsTel(tel));
 
 	</script>
 </body>
