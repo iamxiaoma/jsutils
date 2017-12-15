@@ -46,9 +46,17 @@ window._jsutils = {
         checkIsNumeric: function (s) {
             return /\d+/.test(s);
         },
-        // 检测是否是手机号码
+        // 检测是否电话号码
+        // 验证规则：区号+号码，区号以0开头，3位或4位
+        // 号码由7位或8位数字组成
+        // 区号与号码之间可以无连接符，也可以“-”连接
+        // 如01088888888,010-88888888,0955-7777777 
+        checkIsTel: function (s) {
+            return /^0\d{2,3}-?\d{7,8}$/.test(s);
+        },
+        // 检测是否是手机号码，目前支持国内主流运营商的手机号码段
         checkIsMobile: function (s) {
-            return /^\d{8,}$/.test(s);
+            return /^[1][3,4,5,7,8][0-9]{9}$/.test(s);
         },
         // 检测身份证是否正确，true-正确，false-错误
         checkIsIdCard: function (idCard) {
